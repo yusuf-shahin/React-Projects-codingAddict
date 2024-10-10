@@ -1,4 +1,9 @@
-## Figma URL
+## Project Birthday Buddy :-
+- In this project we render component using Map method .
+- **data** is come from _data.js_ , which is a array of object . 
+- Create **clear all** button to remove all data .
+
+#### Figma URL
 
 [Birthday Buddy](https://www.figma.com/file/e2vsLe9DMnXZIygNHkwGL1/Birthday-buddy?node-id=0%3A1&t=AGNWdO5QQGOoNCfD-1)
 

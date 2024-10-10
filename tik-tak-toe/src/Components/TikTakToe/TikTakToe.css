@@ -1,0 +1,54 @@
+.container {
+  text-align: center;
+}
+
+.title {
+  margin-top: 60px;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title span {
+  padding-left: 16px;
+  color: navy;
+}
+
+.board {
+  height: 500px;
+  width: 450px;
+  display: flex;
+  margin: auto;
+}
+
+.boxes {
+  display: flex;
+  height: 150px;
+  width: 150px;
+  border: 4px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.boxes img {
+  margin: 35px 35px;
+}
+
+/* .row1,
+.row2,
+.row3 {
+  margin: 0 auto;
+} */
+
+.reset {
+  padding: 7px 22px;
+  margin: 15px 0 25px;
+  border-radius: 7px;
+  background-color: brown;
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  cursor: pointer;
+}

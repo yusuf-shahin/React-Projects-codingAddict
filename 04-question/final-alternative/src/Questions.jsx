@@ -1,6 +1,6 @@
-import SingleQuestion from './SingleQuestion';
+import SingleQuestion from "./SingleQuestion"
 
-const Questions = ({ questions, activeId, toggleQuestion }) => {
+const Questions = ({ questions, isShow, toggleQues }) => {
   return (
     <section className='container'>
       <h1>Questions</h1>
@@ -8,13 +8,13 @@ const Questions = ({ questions, activeId, toggleQuestion }) => {
         return (
           <SingleQuestion
             key={question.id}
+            isShow={isShow}
+            toggleQues={toggleQues}
             {...question}
-            activeId={activeId}
-            toggleQuestion={toggleQuestion}
           ></SingleQuestion>
-        );
+        )
       })}
     </section>
-  );
-};
-export default Questions;
+  )
+}
+export default Questions

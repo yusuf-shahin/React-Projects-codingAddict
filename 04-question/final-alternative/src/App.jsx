@@ -6,7 +6,6 @@ function App() {
   const [questions, setQuestions] = useState(data)
   const [isShow, setIsShow] = useState(null)
   const toggleQues = (id) => {
-    setIsShow(id)
     isShow === id ? setIsShow(null) : setIsShow(id)
   }
   return (

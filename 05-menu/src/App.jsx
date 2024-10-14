@@ -12,6 +12,7 @@ const uniqueCategories = ["all", ...new Set(menuCategories)]
 
 const App = () => {
   const [categories, setCategories] = useState(uniqueCategories)
+
   return (
     <main>
       <section className='menu'>

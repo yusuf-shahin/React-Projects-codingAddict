@@ -1,29 +1,28 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { shortList, list, longList } from "./data"
 import { FaQuoteRight } from "react-icons/fa6"
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa"
 
 const Carousel = () => {
   const [people, setPeople] = useState(list)
-  const [currentPerson, setCurrentPerson] = useState(1)
+  const [currentPerson, setCurrentPerson] = useState(0)
+
   const prevSlide = () => {
     setCurrentPerson((e) => {
-      let newElement = e - 1
-      if (newElement < 0) {
-        newElement = people.length - 1
-      }
+      let newElement = (e - 1 + people.length) % people.length
       return newElement
     })
   }
   const nextSlide = () => {
     setCurrentPerson((e) => {
-      let newElement = e + 1
-      if (newElement >= people.length) {
-        newElement = 0
-      }
+      let newElement = (e + 1) % people.length
       return newElement
     })
   }
+
+  // useEffect(() => {
+  //   setInterval(() => nextSlide(), 1000)
+  // }, [])
 
   return (
     <section className='slider-container'>

@@ -8,9 +8,9 @@ const LoramIpsum = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     let amount = parseInt(count)
-    console.log(amount)
+    // console.log(amount)
     setText(() => {
-      const text = data.slice(0, count)
+      const text = data.slice(0, amount)
       return text
     })
   }

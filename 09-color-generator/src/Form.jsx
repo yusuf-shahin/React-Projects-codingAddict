@@ -11,7 +11,7 @@ const Form = ({ addColor }) => {
     <section className='container'>
       <h4>Color Generator</h4>
       <form className='color-form' onSubmit={handleSubmit}>
-        {/* //@ type is color */}
+        {/* //@ input type is color */}
         <input
           type='color'
           value={color}
@@ -21,7 +21,7 @@ const Form = ({ addColor }) => {
         {/* //@ the input type is text */}
         <input
           type='text'
-          placeholder={color}
+          placeholder={color.slice(1)}
           //! Bydefault value is color
           onChange={(e) => setColor(`#${e.target.value}`)}
         />

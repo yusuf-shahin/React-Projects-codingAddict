@@ -5,7 +5,7 @@ const Form = ({ addItems }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!setNewItemName) return
+    if (!newItemName) return
     addItems(newItemName)
     setNewItemName("")
   }

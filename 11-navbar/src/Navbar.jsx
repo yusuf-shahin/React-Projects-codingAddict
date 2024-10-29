@@ -10,14 +10,23 @@ const Navbar = () => {
   const linksRef = useRef(null)
   const linksContainerRef = useRef(null)
 
-  // console.log(linksRef) //# null
+  // console.log(linksRef) //# initial render it will be null
 
   const toggleLinks = () => {
-    console.log(linksRef.current) //# links-container div
+    // console.log(linksRef.current) //# links-container div
     // console.log(linksRef.current.getBoundingClientRect()) //# details of div
 
     setShowLinks(!showLinks)
   }
+
+  const linkStyle = {
+    height: showLinks
+      ? `${linksRef.current.getBoundingClientRect().height}px`
+      : `0px`,
+  }
+
+  // console.log(linkStyle.height)
+
   return (
     <nav>
       <div className='nav-center'>
@@ -28,8 +37,12 @@ const Navbar = () => {
           </button>
         </div>
         {/* pass it as ref */}
-        <div className='links-container' ref={linksRef}>
-          <ul className='links'>
+        <div
+          className='links-container'
+          style={linkStyle}
+          ref={linksContainerRef}
+        >
+          <ul className='links' ref={linksRef}>
             {links.map((link) => {
               const { text, id, icon, url } = link
               return (
@@ -38,7 +51,6 @@ const Navbar = () => {
                 </li>
               )
             })}
-            {console.log(linksRef)}
           </ul>
         </div>
       </div>

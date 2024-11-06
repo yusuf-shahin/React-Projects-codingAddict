@@ -11,6 +11,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      {/* inside Navbar we have "Navlinks" component */}
       <Hero />
       <Sidebar />
       <Submenu />

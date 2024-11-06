@@ -1,7 +1,18 @@
 import React from "react"
+import sublinks from "./data"
+import { useGlovalContext } from "./Context"
 
 const Submenu = () => {
-  return <h2>submenu</h2>
+  const { pageId } = useGlovalContext()
+  const currentPage = sublinks.find((item) => item.pageId === pageId)
+  //! find method return the index .
+  // console.log(currentPage)
+
+  return (
+    <div className='submenu'>
+      <h5>{currentPage.page}</h5>
+    </div>
+  )
 }
 
 export default Submenu

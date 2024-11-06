@@ -1,6 +1,7 @@
 import React from "react"
 import { FaBars } from "react-icons/fa"
 import { useGlovalContext } from "./Context"
+import NavLinks from "./NavLinks"
 
 const Navbar = () => {
   const { openSidebar } = useGlovalContext()
@@ -16,6 +17,7 @@ const Navbar = () => {
           <FaBars />
         </button>
         {/* nav links later */}
+        <NavLinks />
       </div>
     </nav>
   )

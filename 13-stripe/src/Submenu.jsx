@@ -10,7 +10,7 @@ const Submenu = () => {
 
   return (
     <div className='submenu'>
-      <h5>{currentPage.page}</h5>
+      <h5></h5>
     </div>
   )
 }

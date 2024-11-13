@@ -1,7 +1,12 @@
 import CartItem from "./CartItem"
+import { glovalContext } from "./context"
 import { cartItems } from "./data"
 const CartContainer = () => {
-  const cartArray = [...cartItems]
+  const { cart, clearCart } = glovalContext()
+  console.log(cart)
+
+  const cartArray = Array.from(cart)
+  console.log(cartArray)
 
   if (cartArray.length === 0) {
     return (
@@ -22,8 +27,12 @@ const CartContainer = () => {
       </header>
       {/* cart items */}
       <div>
-        {cartArray.map((cartItem) => {
-          return <CartItem key={cartItem.id} {...cartItem} />
+        {cartArray.map((cartItem, index) => {
+          // console.log(cartItem)
+          const [id, item] = cartItem
+          console.log(item)
+
+          return <CartItem key={id} {...item} />
         })}
       </div>
       {/* cart footer */}
@@ -34,10 +43,7 @@ const CartContainer = () => {
             total <span>$10</span>
           </h5>
         </div>
-        <button
-          className='btn btn-hipster'
-          onClick={() => console.log("clear cart")}
-        >
+        <button className='btn btn-hipster' onClick={() => clearCart()}>
           clear cart
         </button>
       </footer>
